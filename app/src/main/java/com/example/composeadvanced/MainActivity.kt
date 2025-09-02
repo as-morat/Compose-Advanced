@@ -4,7 +4,8 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import com.example.composeadvanced.card.Run
+import com.example.composeadvanced.text.Run
+
 import com.example.composeadvanced.ui.theme.ComposeAdvancedTheme
 
 class MainActivity : ComponentActivity() {
