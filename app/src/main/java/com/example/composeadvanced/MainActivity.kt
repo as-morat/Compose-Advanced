@@ -4,8 +4,8 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import com.example.composeadvanced.text.Run
-
+import com.example.composeadvanced.image.Coil
+import com.example.composeadvanced.signup.Run
 import com.example.composeadvanced.ui.theme.ComposeAdvancedTheme
 
 class MainActivity : ComponentActivity() {
@@ -14,7 +14,8 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             ComposeAdvancedTheme {
-                Run()
+//                Run()
+                Coil()
             }
         }
     }

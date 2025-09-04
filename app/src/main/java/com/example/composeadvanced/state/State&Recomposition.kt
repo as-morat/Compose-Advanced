@@ -13,7 +13,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.livedata.observeAsState
+//import androidx.compose.runtime.livedata.observeAsState
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -150,11 +150,11 @@ class ButtonViewModel : ViewModel() {
     }
 }
 
-@Composable
-fun ButtonWithViewModel(viewModel: ButtonViewModel = viewModel()) {
-    val isClicked by viewModel.isClicked.observeAsState(false)
-    StatelessButton(isClicked) { viewModel.toggle() }
-}
+//@Composable
+//fun ButtonWithViewModel(viewModel: ButtonViewModel = viewModel()) {
+//    val isClicked by viewModel.isClicked.observeAsState(false)
+//    StatelessButton(isClicked) { viewModel.toggle() }
+//}
 
 /*
 Concepts:

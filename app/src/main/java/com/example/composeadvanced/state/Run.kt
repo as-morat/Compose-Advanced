@@ -19,7 +19,7 @@ fun Run(modifier: Modifier = Modifier) {
         Spacer(modifier = Modifier.height(20.dp))
         StatefulButton()
         Spacer(modifier = Modifier.height(20.dp))
-        ButtonWithViewModel()
+//        ButtonWithViewModel()
         Spacer(modifier = Modifier.height(20.dp))
         InternalStateExample()
         Spacer(modifier = Modifier.height(20.dp))

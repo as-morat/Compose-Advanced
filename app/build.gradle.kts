@@ -27,23 +27,27 @@ android {
             )
         }
     }
+
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
+
     kotlinOptions {
-        jvmTarget = "11"
+        jvmTarget = "17"
     }
+
     buildFeatures {
         compose = true
     }
+
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.6.0" // Latest 2025 Compose compiler
+        // Kotlin 2.0+ এর জন্য stable compiler extension
+        kotlinCompilerExtensionVersion = "1.5.15"
     }
 }
 
 dependencies {
-
     // Core
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
@@ -56,12 +60,11 @@ dependencies {
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
 
-    // **Added missing dependency for ViewModel in Compose**
-    //noinspection UseTomlInstead
-    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.9.2")
-    implementation(libs.androidx.runtime.livedata)
-    implementation(libs.androidx.compose.material)
-    implementation(libs.compose.material)
+    // ViewModel for Compose
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.8.7")
+
+    // Coil (latest stable for Compose 2025)
+    implementation("io.coil-kt:coil-compose:2.7.0")
 
     // Testing
     testImplementation(libs.junit)
