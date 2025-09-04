@@ -1,4 +1,4 @@
-package com.example.composeadvanced.image
+package com.example.composeadvanced.image.com.example.composeadvanced.image
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize

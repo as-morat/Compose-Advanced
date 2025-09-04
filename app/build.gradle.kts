@@ -65,6 +65,7 @@ dependencies {
 
     // Coil (latest stable for Compose 2025)
     implementation("io.coil-kt:coil-compose:2.7.0")
+    implementation(libs.ads.mobile.sdk)
 
     // Testing
     testImplementation(libs.junit)
