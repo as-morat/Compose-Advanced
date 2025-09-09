@@ -4,8 +4,8 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import com.example.composeadvanced.canvas.RunPrev
-import com.example.composeadvanced.text.RunPass
+import androidx.navigation.compose.rememberNavController
+import com.example.composeadvanced.navigation.nav.NavGraph
 import com.example.composeadvanced.ui.theme.ComposeAdvancedTheme
 
 class MainActivity : ComponentActivity() {
@@ -15,7 +15,11 @@ class MainActivity : ComponentActivity() {
         setContent {
             ComposeAdvancedTheme {
 //                RunPass()
-                RunPrev()
+//                RunPrev()
+//                HomeScreen()
+//                DetailScreen()
+                val navController = rememberNavController()
+                NavGraph(navController = navController)
             }
         }
     }

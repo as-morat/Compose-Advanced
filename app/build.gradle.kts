@@ -33,8 +33,8 @@ android {
         targetCompatibility = JavaVersion.VERSION_17
     }
 
-    kotlinOptions {
-        jvmTarget = "17"
+    kotlin {
+        jvmToolchain(17)
     }
 
     buildFeatures {
@@ -42,7 +42,7 @@ android {
     }
 
     composeOptions {
-        // Kotlin 2.0+ এর জন্য stable compiler extension
+        // Kotlin 2.0 stable compiler extension
         kotlinCompilerExtensionVersion = "1.5.15"
     }
 }
@@ -61,12 +61,14 @@ dependencies {
     implementation(libs.androidx.material3)
 
     // ViewModel for Compose
-    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.8.7")
+    implementation(libs.androidx.lifecycle.viewmodel.compose)
 
     // Coil (latest stable for Compose 2025)
-    implementation("io.coil-kt:coil-compose:2.7.0")
+    implementation(libs.coil.compose)
     implementation(libs.ads.mobile.sdk)
     implementation(libs.compose.material)
+    implementation(libs.androidx.navigation.runtime.ktx)
+    implementation(libs.androidx.navigation.compose)
 
     // Testing
     testImplementation(libs.junit)
@@ -78,4 +80,7 @@ dependencies {
     // Debug
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+
+    implementation(libs.androidx.navigation.compose)
+    implementation(libs.kotlinx.serialization.json)
 }

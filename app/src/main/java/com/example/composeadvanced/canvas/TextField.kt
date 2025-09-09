@@ -39,12 +39,13 @@ fun RunPrev() {
         Card(
             modifier = Modifier
                 .padding(24.dp)
-                .fillMaxWidth(0.9f),
+                .wrapContentWidth() // width auto set based on content
+                .align(Alignment.Center),
             shape = RoundedCornerShape(24.dp),
             colors = CardDefaults.cardColors(
                 containerColor = Color.White.copy(alpha = 0.9f)
             ),
-            elevation = CardDefaults.cardElevation(10.dp)
+            elevation = CardDefaults.cardElevation(10.dp),
         ) {
             Column(
                 horizontalAlignment = Alignment.CenterHorizontally,
@@ -64,7 +65,7 @@ fun RunPrev() {
                     indicatorValue = value
                 )
 
-                // Input + Button row
+                // Inpu
                 OutlinedTextField(
                     value = if (value == 0) "" else value.toString(),
                     onValueChange = { value = it.toIntOrNull() ?: 0 },
