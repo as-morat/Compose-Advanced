@@ -4,9 +4,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import androidx.navigation.compose.rememberNavController
-import com.example.composeadvanced.navigation.bottomnav.MainScreen
-import com.example.composeadvanced.navigation.nav.NavGraph
+import com.example.composeadvanced.searchbar.ModernSearchScreen
 import com.example.composeadvanced.ui.theme.ComposeAdvancedTheme
 
 class MainActivity : ComponentActivity() {
@@ -21,7 +19,8 @@ class MainActivity : ComponentActivity() {
 //                DetailScreen()
 //                val navController = rememberNavController()
 //                NavGraph(navController = navController)
-                MainScreen()
+//                MainScreen()
+                ModernSearchScreen()
             }
         }
     }
