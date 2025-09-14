@@ -45,7 +45,7 @@ fun ModernSearchScreen() {
 
     Scaffold { innerPadding ->
         SearchBar(
-            modifier = Modifier.fillMaxWidth().padding(horizontal = 12.dp),
+            modifier = Modifier.fillMaxWidth(), // .padding(horizontal = 12.dp),
             inputField = {
                 SearchBarDefaults.InputField(
                     query = text,
